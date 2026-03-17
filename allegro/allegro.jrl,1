@@ -1,0 +1,40 @@
+\t (00:00:01) allegro 16.6-2015 S059 (v16-6-112ER) Windows 32
+\t (00:00:01)     Journal start - Sun Dec 14 21:21:54 2025
+\t (00:00:01)         Host=DESKTOP-O2MS4BR User=Roberta Pid=25616 CPUs=16
+\t (00:00:01) CmdLine= C:\OrCAD\OrCAD_16.6_Lite\tools\pcb\bin\allegro.exe -orcad
+\t (00:00:01) 
+\t (00:00:02) Opening existing design...
+\e (00:00:02) ERROR(SPMHDB-238): The design is corrupted. It may have been copied from a different architecture using ASCII mode; copy using binary mode.
+\e (00:00:02) ERROR(SPMHDB-238): The design is corrupted. It may have been copied from a different architecture using ASCII mode; copy using binary mode.
+\i (00:00:04) fillin confirm
+\t (00:00:04) Starting new design...
+\i (00:00:04) trapsize 837
+\i (00:00:04) trapsize 817
+\i (00:00:04) trapsize 840
+\i (00:00:05) trapsize 841
+\i (00:00:05) trapsize 1364
+\i (00:00:05) generaledit 
+\i (00:00:09) open 
+\i (00:00:11) fillin "AMPLIFICATOR_JF_ROBERTA.brd"
+\t (00:00:11) Opening existing design...
+\e (00:00:11) ERROR(SPMHDB-238): The design is corrupted. It may have been copied from a different architecture using ASCII mode; copy using binary mode.
+\e (00:00:11) ERROR(SPMHDB-238): The design is corrupted. It may have been copied from a different architecture using ASCII mode; copy using binary mode.
+\i (00:00:16) fillin confirm
+\t (00:00:16) Starting new design...
+\i (00:00:16) trapsize 1364
+\i (00:00:19) fillin "AMPLIFICATOR_JF_ROBERTA.brd"
+\t (00:00:19) Opening existing design...
+\e (00:00:19) ERROR(SPMHDB-238): The design is corrupted. It may have been copied from a different architecture using ASCII mode; copy using binary mode.
+\e (00:00:19) ERROR(SPMHDB-238): The design is corrupted. It may have been copied from a different architecture using ASCII mode; copy using binary mode.
+\i (00:00:20) fillin confirm
+\t (00:00:20) Starting new design...
+\i (00:00:20) trapsize 1364
+\i (00:00:22) fillin "menu_cancel"
+\i (00:00:22) generaledit 
+\i (00:01:34) open 
+\i (00:01:40) fillin "C:\Users\Roberta\OneDrive\Desktop\AMPLIFICATOR_JF_ROBERTA.brd"
+\i (00:01:40) cd "C:\Users\Roberta\OneDrive\Desktop"
+\t (00:01:40) Opening existing design...
+\t (00:01:40) Grids are drawn 0.1600, 0.1600 apart for enhanced viewability.
+\i (00:01:40) trapsize 1738
+\t (00:01:40)     Journal end - Sun Dec 14 21:23:33 2025

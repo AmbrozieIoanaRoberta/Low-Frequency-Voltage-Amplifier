@@ -1,0 +1,27 @@
+\t (00:00:03) allegro 17.2 S025 Windows SPB 64-bit Edition
+\t (00:00:03)     Journal start - Sun Dec 14 21:41:13 2025
+\t (00:00:03)         Host=DESKTOP-O2MS4BR User=Roberta Pid=25276 CPUs=16
+\t (00:00:03) CmdLine= C:\Cadence\SPB_17.2\tools\bin\allegro.exe
+\t (00:00:03) 
+   (00:00:03) Loading axlcore.cxt 
+\t (00:00:03) Opening existing design...
+\e (00:00:03) ERROR(SPMHDB-238): The design is corrupted. It may have been copied from a different architecture using ASCII mode; copy using binary mode.
+\e (00:00:03) ERROR(SPMHDB-238): The design is corrupted. It may have been copied from a different architecture using ASCII mode; copy using binary mode.
+\i (00:00:04) fillin confirm
+\t (00:00:04) Starting new design...
+\i (00:00:07) trapsize 703
+\i (00:00:07) trapsize 720
+\i (00:00:07) trapsize 1196
+\i (00:00:08) trapsize 7836
+\i (00:00:08) generaledit 
+\i (00:00:13) new 
+\i (00:00:15) newdrawfillin "menu_cancel"
+\i (00:00:15) generaledit 
+\i (00:00:16) open 
+\i (00:00:28) fillin "C:\Users\Roberta\OneDrive\Desktop\AMPLIFICATOR_JF_ROBERTA.brd"
+\i (00:00:28) cd "C:\Users\Roberta\OneDrive\Desktop"
+\t (00:00:28) Opening existing design...
+\i (00:00:29) fillin yes 
+\t (00:00:29) Grids are drawn 0.1600, 0.1600 apart for enhanced viewability.
+\i (00:00:29) trapsize 1604
+\t (00:00:30)     Journal end - Sun Dec 14 21:41:40 2025
