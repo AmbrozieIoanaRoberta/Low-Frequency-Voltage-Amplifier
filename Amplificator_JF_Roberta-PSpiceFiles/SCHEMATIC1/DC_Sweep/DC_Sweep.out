@@ -1,0 +1,194 @@
+
+**** 11/19/25 18:51:15 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-DC_Sweep"  [ C:\Users\Roberta\OneDrive\Desktop\P1_2025_434D_Ambrozie_Ioana-Roberta_AAF_N4_PSpice\P1_2025_434
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "DC_Sweep.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/1n4148.lib" 
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/bc807-25.lib" 
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/bc817-25.lib" 
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/bc846b.lib" 
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/bc856b.lib" 
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/bzx84c2v7.lib" 
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/bzx84c5v1.lib" 
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/bzx84c5v6.lib" 
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/bzx84c6v2.lib" 
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/bzx84c6v8.lib" 
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/bzx84c8v2.lib" 
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/bzx84c10.lib" 
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/irfr120npbf.lib" 
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/mjd31cg.lib" 
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/mjd32cg.lib" 
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/mmbfj177lt1g.lib" 
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/mmbfj309lt1g.lib" 
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/nss30101lt1g.lib" 
+* From [PSPICE NETLIST] section of D:\Apps\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.DC LIN V_V1 -12 12 0.01 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source AMPLIFICATOR_JF_ROBERTA
+D_D2         N27050 0 BZX84-C5V1 
+C_C1         N26084 N26604  470p  TC=0,0 
+X_U3         N262301 N26298 1N4148 
+Q_Q1         N26084 N29477 N26078 QBC856B 
+R_R7         0 N26544  1k TC=0,0 
+V_VEE         N26298 0 -12Vdc
+R_R4         N26642 N26638  510 TC=0,0 
+Q_Q4         N26170 N26170 N26266 QBC846B 
+Q_Q5         N26078 N26392 N26366 QBC856B 
+R_R5         N26492 N26366  330 TC=0,0 
+R_R10         N26298 N26266  82 TC=0,0 
+Q_Q10         N26638 N26642 N26604 QBC846B 
+R_R2         N27144 N26492  330 TC=0,0 
+Q_Q6         N26604 N26084 N262301 QBC846B 
+Q_Q8         N26492 N26638 OUT QMJD31C 
+D_D1         0 N26968 BZX84-C5V1 
+R_R9         N26298 N26292  82 TC=0,0 
+R_R15         N26968 N26492  1k TC=0,0 
+R_Rs2         0 N27222  10 TC=0,0 
+R_R8         N26604 N26642  510 TC=0,0 
+R_R6         N26544 OUT  9.1k TC=0,0 
+X_U1         N264520 N26392 1N4148 
+Q_Q3         N26084 N26170 N26292 QBC846B 
+Q_Q7         N26638 N26392 N27144 QBC856B 
+Q_Q9         N26298 N26604 OUT QMJD32CT4G 
+R_R14         N27050 N26298  1k TC=0,0 
+V_VCC         N26492 0 12Vdc
+X_U2         N26492 N264520 1N4148 
+R_R13         0 N26392  15k TC=0,0 
+Q_Q2         N26170 N26544 N26078 QBC856B 
+R_Rs1         N27222 OUT  10 TC=0,0 
+V_V1         IN 0  AC 1
++SIN 0 0.2 1k 0 0 0
+R_R11         IN N29477  470 TC=0,0 
+R_R12         0 N29477  330k TC=0,0 
+
+**** RESUMING DC_Sweep.cir ****
+.END
+
+**** 11/19/25 18:51:15 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-DC_Sweep"  [ C:\Users\Roberta\OneDrive\Desktop\P1_2025_434D_Ambrozie_Ioana-Roberta_AAF_N4_PSpice\P1_2025_434
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               BZX84-C5V1      X_U3.1N4148     X_U1.1N4148     X_U2.1N4148     
+          IS    2.666500E-18    4.352000E-09    4.352000E-09    4.352000E-09 
+           N     .82284         1.906           1.906           1.906        
+         ISR  150.400000E-12                                                 
+         IKF     .01176                                                      
+          BV    5.176         110             110             110            
+         IBV     .10454       100.000000E-06  100.000000E-06  100.000000E-06 
+          RS     .51617          .6458           .6458           .6458       
+          TT   43.858000E-09    3.480000E-09    3.480000E-09    3.480000E-09 
+         CJO  232.290000E-12  704.800000E-15  704.800000E-15  704.800000E-15 
+          VJ     .79587          .869            .869            .869        
+           M     .35004          .03             .03             .03         
+
+
+**** 11/19/25 18:51:15 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-DC_Sweep"  [ C:\Users\Roberta\OneDrive\Desktop\P1_2025_434D_Ambrozie_Ioana-Roberta_AAF_N4_PSpice\P1_2025_434
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               QBC846B         QBC856B         QMJD31C         QMJD32CT4G      
+               NPN             PNP             NPN             PNP             
+       LEVEL    1               1               1               1            
+          IS   18.220000E-15   20.140000E-15   90.620200E-12  363.152000E-15 
+          EG                                    1.05            1.15135      
+          BF  324.4           315.3             3.418700E+03  272.001        
+          NF     .9932           .9974          1.17603          .981175     
+         VAF   82              39.15           29.2393          8.02311      
+         IKF     .109            .079            .108267         .255979     
+         ISE  289.400000E-18    6.578000E-15  537.193000E-09    1.395810E-09 
+          NE    1.4             1.45            4               2.64418      
+          BR    8.29            8.68          367.353          26.8791       
+          NR     .9931           .9952          5                .990094     
+         VAR   17.9             9.5             1.631          38.8632       
+         IKR     .09             .09            1.15207         2.55979      
+         ISC    9.982000E-12   16.330000E-15    1.157540E-09  254.712000E-15 
+          NC    1.763           1.15            1.49179         1.09617      
+         ISS    0               0               0               0            
+          RB   10              10              22.4853        210.108        
+         RBM    5               5.000000E-06    1.000000E-12   10.000000E-06 
+         IRB    5.000000E-06    5.000000E-06    2.209370E-03   13.167500E-06 
+          RE     .649            .663         100.000000E-06     .03296      
+          RC     .7014           .718            .138633         .164799     
+         CJE   12.440000E-12   11.350000E-12  373.889000E-12  201.825000E-12 
+         VJE     .7579           .7071           .67672          .360096     
+         MJE     .3656           .3808           .575056         .350357     
+         CJC    3.347000E-12    6.395000E-12  352.510000E-12  118.774000E-12 
+         VJC     .5463           .4951           .884306         .694849     
+         MJC     .391            .44             .473486         .382715     
+        XCJC     .6193           .6288           .1              .778775     
+         CJS    0               0               0               0            
+         VJS     .75             .75             .75             .75         
+         MJS     .333            .333            .5              .5          
+          FC     .979            .9059           .8              .9          
+          TF  490.800000E-12  654.600000E-12   10.000000E-09    3.622020E-09 
+         XTF    9.51            5.387           3.4926        276.075        
+         VTF    2.927           6.245          12.6615           .608188     
+         ITF     .3131           .2108           .052395        7.779510E-03 
+          TR   90.000000E-09   55.000000E-09    3.298030E-06    2.029570E-06 
+         XTB                                  999.997000E-15     .709265     
+         XTI                                    1.000000E-12    4.43052      
+          KF    0               0               0               0            
+          AF    1               1               1               1            
+          CN    2.42            2.2             2.42            2.2          
+           D     .87             .52             .87             .52         
+
+
+
+          JOB CONCLUDED
+
+**** 11/19/25 18:51:15 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-DC_Sweep"  [ C:\Users\Roberta\OneDrive\Desktop\P1_2025_434D_Ambrozie_Ioana-Roberta_AAF_N4_PSpice\P1_2025_434
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .20
+

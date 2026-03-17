@@ -1,0 +1,928 @@
+
+**** 11/19/25 12:28:52 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Transient"  [ C:\Users\Roberta\OneDrive\Desktop\P1_2025_434D_Ambrozie_Ioana-Roberta_AAF_N4_PSpice\P1_2025_43
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Transient.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/1n4148.lib" 
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/bc807-25.lib" 
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/bc817-25.lib" 
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/bc846b.lib" 
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/bc856b.lib" 
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/bzx84c2v7.lib" 
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/bzx84c5v1.lib" 
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/bzx84c5v6.lib" 
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/bzx84c6v2.lib" 
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/bzx84c6v8.lib" 
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/bzx84c8v2.lib" 
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/bzx84c10.lib" 
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/irfr120npbf.lib" 
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/mjd31cg.lib" 
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/mjd32cg.lib" 
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/mmbfj177lt1g.lib" 
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/mmbfj309lt1g.lib" 
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/nss30101lt1g.lib" 
+* From [PSPICE NETLIST] section of D:\Apps\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 10ms 0 10u 
+.TEMP -20 0 25 50 75 120
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source AMPLIFICATOR_JF_ROBERTA
+D_D2         N27050 0 BZX84-C5V1 
+C_C1         N26084 N26604  470p  TC=0,0 
+X_U3         N262301 N26298 1N4148 
+Q_Q1         N26084 N29477 N26078 QBC856B 
+R_R7         0 N26544  1k TC=0,0 
+V_VEE         N26298 0 -12Vdc
+R_R4         N26642 N26638  510 TC=0,0 
+Q_Q4         N26170 N26170 N26266 QBC846B 
+Q_Q5         N26078 N26392 N26366 QBC856B 
+R_R5         N26492 N26366  330 TC=0,0 
+R_R10         N26298 N26266  82 TC=0,0 
+Q_Q10         N26638 N26642 N26604 QBC846B 
+R_R2         N27144 N26492  330 TC=0,0 
+Q_Q6         N26604 N26084 N262301 QBC846B 
+Q_Q8         N26492 N26638 OUT QMJD31C 
+D_D1         0 N26968 BZX84-C5V1 
+R_R9         N26298 N26292  82 TC=0,0 
+R_R15         N26968 N26492  1k TC=0,0 
+R_Rs2         0 N27222  10 TC=0,0 
+R_R8         N26604 N26642  510 TC=0,0 
+R_R6         N26544 OUT  9.1k TC=0,0 
+X_U1         N264520 N26392 1N4148 
+Q_Q3         N26084 N26170 N26292 QBC846B 
+Q_Q7         N26638 N26392 N27144 QBC856B 
+Q_Q9         N26298 N26604 OUT QMJD32CT4G 
+R_R14         N27050 N26298  1k TC=0,0 
+V_VCC         N26492 0 12Vdc
+X_U2         N26492 N264520 1N4148 
+R_R13         0 N26392  15k TC=0,0 
+Q_Q2         N26170 N26544 N26078 QBC856B 
+R_Rs1         N27222 OUT  10 TC=0,0 
+V_V1         N29963 0  AC 1
++SIN 0 0.2 1k 0 0 0
+R_R11         N29963 N29477  470 TC=0,0 
+R_R12         0 N29477  330k TC=0,0 
+
+**** RESUMING Transient.cir ****
+.END
+
+
+INFO(ORPSIM-15423): Unable to find index file bzx84c8v2.ind for library file bzx84c8v2.lib.
+
+INFO(ORPSIM-15422): Making new index file bzx84c8v2.ind for library file bzx84c8v2.lib.
+
+Index has 1 entries from 1 file(s).
+
+**** 11/19/25 12:28:52 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Transient"  [ C:\Users\Roberta\OneDrive\Desktop\P1_2025_434D_Ambrozie_Ioana-Roberta_AAF_N4_PSpice\P1_2025_43
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               BZX84-C5V1      X_U3.1N4148     X_U1.1N4148     X_U2.1N4148     
+          IS    2.666500E-18    4.352000E-09    4.352000E-09    4.352000E-09 
+           N     .82284         1.906           1.906           1.906        
+         ISR  150.400000E-12                                                 
+         IKF     .01176                                                      
+          BV    5.176         110             110             110            
+         IBV     .10454       100.000000E-06  100.000000E-06  100.000000E-06 
+          RS     .51617          .6458           .6458           .6458       
+          TT   43.858000E-09    3.480000E-09    3.480000E-09    3.480000E-09 
+         CJO  232.290000E-12  704.800000E-15  704.800000E-15  704.800000E-15 
+          VJ     .79587          .869            .869            .869        
+           M     .35004          .03             .03             .03         
+
+
+**** 11/19/25 12:28:52 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Transient"  [ C:\Users\Roberta\OneDrive\Desktop\P1_2025_434D_Ambrozie_Ioana-Roberta_AAF_N4_PSpice\P1_2025_43
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               QBC846B         QBC856B         QMJD31C         QMJD32CT4G      
+               NPN             PNP             NPN             PNP             
+       LEVEL    1               1               1               1            
+          IS   18.220000E-15   20.140000E-15   90.620200E-12  363.152000E-15 
+          EG                                    1.05            1.15135      
+          BF  324.4           315.3             3.418700E+03  272.001        
+          NF     .9932           .9974          1.17603          .981175     
+         VAF   82              39.15           29.2393          8.02311      
+         IKF     .109            .079            .108267         .255979     
+         ISE  289.400000E-18    6.578000E-15  537.193000E-09    1.395810E-09 
+          NE    1.4             1.45            4               2.64418      
+          BR    8.29            8.68          367.353          26.8791       
+          NR     .9931           .9952          5                .990094     
+         VAR   17.9             9.5             1.631          38.8632       
+         IKR     .09             .09            1.15207         2.55979      
+         ISC    9.982000E-12   16.330000E-15    1.157540E-09  254.712000E-15 
+          NC    1.763           1.15            1.49179         1.09617      
+         ISS    0               0               0               0            
+          RB   10              10              22.4853        210.108        
+         RBM    5               5.000000E-06    1.000000E-12   10.000000E-06 
+         IRB    5.000000E-06    5.000000E-06    2.209370E-03   13.167500E-06 
+          RE     .649            .663         100.000000E-06     .03296      
+          RC     .7014           .718            .138633         .164799     
+         CJE   12.440000E-12   11.350000E-12  373.889000E-12  201.825000E-12 
+         VJE     .7579           .7071           .67672          .360096     
+         MJE     .3656           .3808           .575056         .350357     
+         CJC    3.347000E-12    6.395000E-12  352.510000E-12  118.774000E-12 
+         VJC     .5463           .4951           .884306         .694849     
+         MJC     .391            .44             .473486         .382715     
+        XCJC     .6193           .6288           .1              .778775     
+         CJS    0               0               0               0            
+         VJS     .75             .75             .75             .75         
+         MJS     .333            .333            .5              .5          
+          FC     .979            .9059           .8              .9          
+          TF  490.800000E-12  654.600000E-12   10.000000E-09    3.622020E-09 
+         XTF    9.51            5.387           3.4926        276.075        
+         VTF    2.927           6.245          12.6615           .608188     
+         ITF     .3131           .2108           .052395        7.779510E-03 
+          TR   90.000000E-09   55.000000E-09    3.298030E-06    2.029570E-06 
+         XTB                                  999.997000E-15     .709265     
+         XTI                                    1.000000E-12    4.43052      
+          KF    0               0               0               0            
+          AF    1               1               1               1            
+          CN    2.42            2.2             2.42            2.2          
+           D     .87             .52             .87             .52         
+
+
+**** 11/19/25 12:28:52 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Transient"  [ C:\Users\Roberta\OneDrive\Desktop\P1_2025_434D_Ambrozie_Ioana-Roberta_AAF_N4_PSpice\P1_2025_43
+
+
+ ****     TEMPERATURE-ADJUSTED VALUES      TEMPERATURE =  -20.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+ **** DIODE MODEL PARAMETERS
+
+                 BZX84-C5V1     X_U3.1N4148    X_U1.1N4148  
+
+         IS        8.930E-23      5.090E-11      5.090E-11  
+         VJ        8.689E-01      9.305E-01      9.305E-01  
+        CJO        2.233E-10      7.029E-13      7.029E-13  
+         RS        5.162E-01      6.458E-01      6.458E-01  
+        IKF        1.176E-02      0.000E+00      0.000E+00  
+         BV        5.176E+00      1.100E+02      1.100E+02  
+
+                 X_U2.1N4148                                
+
+         IS        5.090E-11  
+         VJ        9.305E-01  
+        CJO        7.029E-13  
+         RS        6.458E-01  
+        IKF        0.000E+00  
+         BV        1.100E+02  
+
+
+ **** BJT MODEL PARAMETERS
+
+                   QBC856B        QBC846B        QMJD31C    
+
+         BF        3.153E+02      3.244E+02      3.419E+03  
+        ISE        1.899E-17      6.781E-19      8.162E-08  
+        VJE        7.940E-01      8.368E-01      7.684E-01  
+        CJE        1.074E-11      1.188E-11      3.407E-10  
+         RE        6.630E-01      6.490E-01      1.000E-04  
+         RB        1.000E+01      1.000E+01      2.249E+01  
+         BR        8.680E+00      8.290E+00      3.674E+02  
+        ISC        1.026E-17      8.139E-14      7.401E-12  
+        VJC        6.152E-01      6.584E-01      9.435E-01  
+        CJC        5.660E-12      3.054E-12      3.382E-10  
+         RC        7.180E-01      7.014E-01      1.386E-01  
+        RBM        5.000E-06      5.000E+00      1.000E-12  
+         IS        4.186E-18      3.787E-18      4.829E-14  
+        ISS        0.000E+00      0.000E+00      0.000E+00  
+        VJS        8.302E-01      8.302E-01      8.302E-01  
+        CJS        0.000E+00      0.000E+00      0.000E+00  
+      GAMMA        1.000E-11      1.000E-11      1.000E-11  
+        RCO        0.000E+00      0.000E+00      0.000E+00  
+         VO        1.000E+01      1.000E+01      1.000E+01  
+
+                 QMJD32CT4G                                 
+
+         BF        2.411E+02  
+        ISE        5.199E-11  
+        VJE        5.013E-01  
+        CJE        1.728E-10  
+         RE        3.296E-02  
+         RB        2.101E+02  
+         BR        2.382E+01  
+        ISC        7.676E-17  
+        VJC        7.837E-01  
+        CJC        1.121E-10  
+         RC        1.648E-01  
+        RBM        1.000E-05  
+         IS        4.396E-17  
+        ISS        0.000E+00  
+        VJS        8.302E-01  
+        CJS        0.000E+00  
+      GAMMA        1.000E-11  
+        RCO        0.000E+00  
+         VO        1.000E+01  
+
+
+**** 11/19/25 12:28:52 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Transient"  [ C:\Users\Roberta\OneDrive\Desktop\P1_2025_434D_Ambrozie_Ioana-Roberta_AAF_N4_PSpice\P1_2025_43
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =  -20.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  OUT)    -.0081  (N26078)     .7176 (N26084)  -10.5460 (N26170)  -11.2020     
+
+(N26266)  -11.9220 (N26292)  -11.9220 (N26298)  -12.0000 (N26366)   11.3650     
+
+(N26392)   10.6330 (N26492)   12.0000 (N26544)     .0016 (N26604)    -.7123     
+
+(N26638)     .6816 (N26642)    -.0156 (N26968)    5.1202 (N27050)   -5.1202     
+
+(N27144)   11.3650 (N27222)    -.0041 (N29477)     .0013 (N29963)    0.0000     
+
+(N262301)  -11.2770                   (N264520)   11.3160                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_VEE        2.744E-02
+    V_VCC       -2.775E-02
+    V_V1         2.690E-06
+
+    TOTAL POWER DISSIPATION   6.62E-01  WATTS
+
+
+**** 11/19/25 12:28:52 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Transient"  [ C:\Users\Roberta\OneDrive\Desktop\P1_2025_434D_Ambrozie_Ioana-Roberta_AAF_N4_PSpice\P1_2025_43
+
+
+ ****     TEMPERATURE-ADJUSTED VALUES      TEMPERATURE =    0.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+ **** DIODE MODEL PARAMETERS
+
+                 BZX84-C5V1     X_U3.1N4148    X_U1.1N4148  
+
+         IS        1.091E-20      4.052E-10      4.052E-10  
+         VJ        8.382E-01      9.048E-01      9.048E-01  
+        CJO        2.271E-10      7.037E-13      7.037E-13  
+         RS        5.162E-01      6.458E-01      6.458E-01  
+        IKF        1.176E-02      0.000E+00      0.000E+00  
+         BV        5.176E+00      1.100E+02      1.100E+02  
+
+                 X_U2.1N4148                                
+
+         IS        4.052E-10  
+         VJ        9.048E-01  
+        CJO        7.037E-13  
+         RS        6.458E-01  
+        IKF        0.000E+00  
+         BV        1.100E+02  
+
+
+ **** BJT MODEL PARAMETERS
+
+                   QBC856B        QBC846B        QMJD31C    
+
+         BF        3.153E+02      3.244E+02      3.419E+03  
+        ISE        2.903E-16      1.142E-17      1.970E-07  
+        VJE        7.574E-01      8.037E-01      7.298E-01  
+        CJE        1.100E-11      1.212E-11      3.547E-10  
+         RE        6.630E-01      6.490E-01      1.000E-04  
+         RB        1.000E+01      1.000E+01      2.249E+01  
+         BR        8.680E+00      8.290E+00      3.674E+02  
+        ISC        3.193E-16      7.666E-13      7.858E-11  
+        VJC        5.645E-01      6.111E-01      9.187E-01  
+        CJC        5.970E-12      3.178E-12      3.442E-10  
+         RC        7.180E-01      7.014E-01      1.386E-01  
+        RBM        5.000E-06      5.000E+00      1.000E-12  
+         IS        2.182E-16      1.974E-16      1.639E-12  
+        ISS        0.000E+00      0.000E+00      0.000E+00  
+        VJS        7.965E-01      7.965E-01      7.965E-01  
+        CJS        0.000E+00      0.000E+00      0.000E+00  
+      GAMMA        1.000E-11      1.000E-11      1.000E-11  
+        RCO        0.000E+00      0.000E+00      0.000E+00  
+         VO        1.000E+01      1.000E+01      1.000E+01  
+
+                 QMJD32CT4G                                 
+
+         BF        2.544E+02  
+        ISE        2.413E-10  
+        VJE        4.417E-01  
+        CJE        1.850E-10  
+         RE        3.296E-02  
+         RB        2.101E+02  
+         BR        2.514E+01  
+        ISC        3.360E-15  
+        VJC        7.463E-01  
+        CJC        1.149E-10  
+         RC        1.648E-01  
+        RBM        1.000E-05  
+         IS        2.936E-15  
+        ISS        0.000E+00  
+        VJS        7.965E-01  
+        CJS        0.000E+00  
+      GAMMA        1.000E-11  
+        RCO        0.000E+00  
+         VO        1.000E+01  
+
+
+**** 11/19/25 12:28:52 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Transient"  [ C:\Users\Roberta\OneDrive\Desktop\P1_2025_434D_Ambrozie_Ioana-Roberta_AAF_N4_PSpice\P1_2025_43
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =    0.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  OUT)    -.0073  (N26078)     .6796 (N26084)  -10.6210 (N26170)  -11.2440     
+
+(N26266)  -11.9270 (N26292)  -11.9270 (N26298)  -12.0000 (N26366)   11.4060     
+
+(N26392)   10.7100 (N26492)   12.0000 (N26544)     .0015 (N26604)    -.6732     
+
+(N26638)     .6424 (N26642)    -.0156 (N26968)    5.1155 (N27050)   -5.1155     
+
+(N27144)   11.4060 (N27222)    -.0036 (N29477)     .0012 (N29963)    0.0000     
+
+(N262301)  -11.3160                   (N264520)   11.3550                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_VEE        2.968E-02
+    V_VCC       -3.003E-02
+    V_V1         2.508E-06
+
+    TOTAL POWER DISSIPATION   7.17E-01  WATTS
+
+
+**** 11/19/25 12:28:52 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Transient"  [ C:\Users\Roberta\OneDrive\Desktop\P1_2025_434D_Ambrozie_Ioana-Roberta_AAF_N4_PSpice\P1_2025_43
+
+
+ ****     TEMPERATURE-ADJUSTED VALUES      TEMPERATURE =   25.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+ **** DIODE MODEL PARAMETERS
+
+                 BZX84-C5V1     X_U3.1N4148    X_U1.1N4148  
+
+         IS        1.834E-18      3.703E-09      3.703E-09  
+         VJ        7.990E-01      8.717E-01      8.717E-01  
+        CJO        2.319E-10      7.047E-13      7.047E-13  
+         RS        5.162E-01      6.458E-01      6.458E-01  
+        IKF        1.176E-02      0.000E+00      0.000E+00  
+         BV        5.176E+00      1.100E+02      1.100E+02  
+
+                 X_U2.1N4148                                
+
+         IS        3.703E-09  
+         VJ        8.717E-01  
+        CJO        7.047E-13  
+         RS        6.458E-01  
+        IKF        0.000E+00  
+         BV        1.100E+02  
+
+
+ **** BJT MODEL PARAMETERS
+
+                   QBC856B        QBC846B        QMJD31C    
+
+         BF        3.153E+02      3.244E+02      3.419E+03  
+        ISE        5.319E-15      2.323E-16      5.018E-07  
+        VJE        7.109E-01      7.613E-01      6.807E-01  
+        CJE        1.132E-11      1.242E-11      3.725E-10  
+         RE        6.630E-01      6.490E-01      1.000E-04  
+         RB        1.000E+01      1.000E+01      2.249E+01  
+         BR        8.680E+00      8.290E+00      3.674E+02  
+        ISC        1.249E-14      8.382E-12      9.644E-10  
+        VJC        5.003E-01      5.511E-01      8.869E-01  
+        CJC        6.363E-12      3.334E-12      3.519E-10  
+         RC        7.180E-01      7.014E-01      1.386E-01  
+        RBM        5.000E-06      5.000E+00      1.000E-12  
+         IS        1.480E-14      1.339E-14      6.902E-11  
+        ISS        0.000E+00      0.000E+00      0.000E+00  
+        VJS        7.535E-01      7.535E-01      7.535E-01  
+        CJS        0.000E+00      0.000E+00      0.000E+00  
+      GAMMA        1.000E-11      1.000E-11      1.000E-11  
+        RCO        0.000E+00      0.000E+00      0.000E+00  
+         VO        1.000E+01      1.000E+01      1.000E+01  
+
+                 QMJD32CT4G                                 
+
+         BF        2.707E+02  
+        ISE        1.239E-09  
+        VJE        3.662E-01  
+        CJE        2.006E-10  
+         RE        3.296E-02  
+         RB        2.101E+02  
+         BR        2.675E+01  
+        ISC        1.897E-13  
+        VJC        6.987E-01  
+        CJC        1.185E-10  
+         RC        1.648E-01  
+        RBM        1.000E-05  
+         IS        2.615E-13  
+        ISS        0.000E+00  
+        VJS        7.535E-01  
+        CJS        0.000E+00  
+      GAMMA        1.000E-11  
+        RCO        0.000E+00  
+         VO        1.000E+01  
+
+
+**** 11/19/25 12:28:52 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Transient"  [ C:\Users\Roberta\OneDrive\Desktop\P1_2025_434D_Ambrozie_Ioana-Roberta_AAF_N4_PSpice\P1_2025_43
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   25.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  OUT)    -.0062  (N26078)     .6309 (N26084)  -10.7170 (N26170)  -11.2980     
+
+(N26266)  -11.9330 (N26292)  -11.9330 (N26298)  -12.0000 (N26366)   11.4560     
+
+(N26392)   10.8080 (N26492)   12.0000 (N26544)     .0014 (N26604)    -.6227     
+
+(N26638)     .5923 (N26642)    -.0154 (N26968)    5.1097 (N27050)   -5.1097     
+
+(N27144)   11.4560 (N27222)    -.0031 (N29477)     .0011 (N29963)    0.0000     
+
+(N262301)  -11.3660                   (N264520)   11.4040                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_VEE        3.183E-02
+    V_VCC       -3.224E-02
+    V_V1         2.283E-06
+
+    TOTAL POWER DISSIPATION   7.69E-01  WATTS
+
+
+**** 11/19/25 12:28:52 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Transient"  [ C:\Users\Roberta\OneDrive\Desktop\P1_2025_434D_Ambrozie_Ioana-Roberta_AAF_N4_PSpice\P1_2025_43
+
+
+ ****     TEMPERATURE-ADJUSTED VALUES      TEMPERATURE =   50.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+ **** DIODE MODEL PARAMETERS
+
+                 BZX84-C5V1     X_U3.1N4148    X_U1.1N4148  
+
+         IS        1.429E-16      2.428E-08      2.428E-08  
+         VJ        7.589E-01      8.377E-01      8.377E-01  
+        CJO        2.368E-10      7.058E-13      7.058E-13  
+         RS        5.162E-01      6.458E-01      6.458E-01  
+        IKF        1.176E-02      0.000E+00      0.000E+00  
+         BV        5.176E+00      1.100E+02      1.100E+02  
+
+                 X_U2.1N4148                                
+
+         IS        2.428E-08  
+         VJ        8.377E-01  
+        CJO        7.058E-13  
+         RS        6.458E-01  
+        IKF        0.000E+00  
+         BV        1.100E+02  
+
+
+ **** BJT MODEL PARAMETERS
+
+                   QBC856B        QBC846B        QMJD31C    
+
+         BF        3.153E+02      3.244E+02      3.419E+03  
+        ISE        6.300E-14      3.004E-15      1.106E-06  
+        VJE        6.634E-01      7.181E-01      6.307E-01  
+        CJE        1.166E-11      1.272E-11      3.905E-10  
+         RE        6.630E-01      6.490E-01      1.000E-04  
+         RB        1.000E+01      1.000E+01      2.249E+01  
+         BR        8.680E+00      8.290E+00      3.674E+02  
+        ISC        2.820E-13      6.401E-11      8.030E-09  
+        VJC        4.351E-01      4.902E-01      8.541E-01  
+        CJC        6.762E-12      3.493E-12      3.597E-10  
+         RC        7.180E-01      7.014E-01      1.386E-01  
+        RBM        5.000E-06      5.000E+00      1.000E-12  
+         IS        5.331E-13      4.823E-13      1.630E-09  
+        ISS        0.000E+00      0.000E+00      0.000E+00  
+        VJS        7.095E-01      7.095E-01      7.095E-01  
+        CJS        0.000E+00      0.000E+00      0.000E+00  
+      GAMMA        1.000E-11      1.000E-11      1.000E-11  
+        RCO        0.000E+00      0.000E+00      0.000E+00  
+         VO        1.000E+01      1.000E+01      1.000E+01  
+
+                 QMJD32CT4G                                 
+
+         BF        2.866E+02  
+        ISE        4.968E-09  
+        VJE        2.898E-01  
+        CJE        2.163E-10  
+         RE        3.296E-02  
+         RB        2.101E+02  
+         BR        2.832E+01  
+        ISC        5.864E-12  
+        VJC        6.502E-01  
+        CJC        1.221E-10  
+         RC        1.648E-01  
+        RBM        1.000E-05  
+         IS        1.197E-11  
+        ISS        0.000E+00  
+        VJS        7.095E-01  
+        CJS        0.000E+00  
+      GAMMA        1.000E-11  
+        RCO        0.000E+00  
+         VO        1.000E+01  
+
+
+**** 11/19/25 12:28:52 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Transient"  [ C:\Users\Roberta\OneDrive\Desktop\P1_2025_434D_Ambrozie_Ioana-Roberta_AAF_N4_PSpice\P1_2025_43
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   50.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  OUT)    -.0053  (N26078)     .5811 (N26084)  -10.8170 (N26170)  -11.3530     
+
+(N26266)  -11.9390 (N26292)  -11.9390 (N26298)  -12.0000 (N26366)   11.5070     
+
+(N26392)   10.9060 (N26492)   12.0000 (N26544)     .0013 (N26604)    -.5707     
+
+(N26638)     .5411 (N26642)    -.0150 (N26968)    5.1039 (N27050)   -5.1039     
+
+(N27144)   11.5070 (N27222)    -.0026 (N29477) 968.7E-06 (N29963)    0.0000     
+
+(N262301)  -11.4180                   (N264520)   11.4530                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_VEE        3.322E-02
+    V_VCC       -3.368E-02
+    V_V1         2.061E-06
+
+    TOTAL POWER DISSIPATION   8.03E-01  WATTS
+
+
+**** 11/19/25 12:28:52 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Transient"  [ C:\Users\Roberta\OneDrive\Desktop\P1_2025_434D_Ambrozie_Ioana-Roberta_AAF_N4_PSpice\P1_2025_43
+
+
+ ****     TEMPERATURE-ADJUSTED VALUES      TEMPERATURE =   75.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+ **** DIODE MODEL PARAMETERS
+
+                 BZX84-C5V1     X_U3.1N4148    X_U1.1N4148  
+
+         IS        6.079E-15      1.226E-07      1.226E-07  
+         VJ        7.179E-01      8.028E-01      8.028E-01  
+        CJO        2.418E-10      7.068E-13      7.068E-13  
+         RS        5.162E-01      6.458E-01      6.458E-01  
+        IKF        1.176E-02      0.000E+00      0.000E+00  
+         BV        5.176E+00      1.100E+02      1.100E+02  
+
+                 X_U2.1N4148                                
+
+         IS        1.226E-07  
+         VJ        8.028E-01  
+        CJO        7.068E-13  
+         RS        6.458E-01  
+        IKF        0.000E+00  
+         BV        1.100E+02  
+
+
+ **** BJT MODEL PARAMETERS
+
+                   QBC856B        QBC846B        QMJD31C    
+
+         BF        3.153E+02      3.244E+02      3.419E+03  
+        ISE        5.292E-13      2.723E-14      2.177E-06  
+        VJE        6.150E-01      6.739E-01      5.797E-01  
+        CJE        1.200E-11      1.303E-11      4.088E-10  
+         RE        6.630E-01      6.490E-01      1.000E-04  
+         RB        1.000E+01      1.000E+01      2.249E+01  
+         BR        8.680E+00      8.290E+00      3.674E+02  
+        ISC        4.127E-12      3.685E-10      4.932E-08  
+        VJC        3.691E-01      4.285E-01      8.205E-01  
+        CJC        7.165E-12      3.654E-12      3.678E-10  
+         RC        7.180E-01      7.014E-01      1.386E-01  
+        RBM        5.000E-06      5.000E+00      1.000E-12  
+         IS        1.167E-11      1.056E-11      2.444E-08  
+        ISS        0.000E+00      0.000E+00      0.000E+00  
+        VJS        6.647E-01      6.647E-01      6.647E-01  
+        CJS        0.000E+00      0.000E+00      0.000E+00  
+      GAMMA        1.000E-11      1.000E-11      1.000E-11  
+        RCO        0.000E+00      0.000E+00      0.000E+00  
+         VO        1.000E+01      1.000E+01      1.000E+01  
+
+                 QMJD32CT4G                                 
+
+         BF        3.022E+02  
+        ISE        1.641E-08  
+        VJE        2.125E-01  
+        CJE        2.322E-10  
+         RE        3.296E-02  
+         RB        2.101E+02  
+         BR        2.986E+01  
+        ISC        1.128E-10  
+        VJC        6.008E-01  
+        CJC        1.258E-10  
+         RC        1.648E-01  
+        RBM        1.000E-05  
+         IS        3.243E-10  
+        ISS        0.000E+00  
+        VJS        6.647E-01  
+        CJS        0.000E+00  
+      GAMMA        1.000E-11  
+        RCO        0.000E+00  
+         VO        1.000E+01  
+
+
+**** 11/19/25 12:28:52 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Transient"  [ C:\Users\Roberta\OneDrive\Desktop\P1_2025_434D_Ambrozie_Ioana-Roberta_AAF_N4_PSpice\P1_2025_43
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   75.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  OUT)    -.0044  (N26078)     .5300 (N26084)  -10.9190 (N26170)  -11.4090     
+
+(N26266)  -11.9450 (N26292)  -11.9450 (N26298)  -12.0000 (N26366)   11.5570     
+
+(N26392)   11.0060 (N26492)   12.0000 (N26544)     .0012 (N26604)    -.5173     
+
+(N26638)     .4887 (N26642)    -.0145 (N26968)    5.0980 (N27050)   -5.0980     
+
+(N27144)   11.5570 (N27222)    -.0022 (N29477) 866.4E-06 (N29963)    0.0000     
+
+(N262301)  -11.4710                   (N264520)   11.5030                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_VEE        3.390E-02
+    V_VCC       -3.442E-02
+    V_V1         1.843E-06
+
+    TOTAL POWER DISSIPATION   8.20E-01  WATTS
+
+
+**** 11/19/25 12:28:52 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Transient"  [ C:\Users\Roberta\OneDrive\Desktop\P1_2025_434D_Ambrozie_Ioana-Roberta_AAF_N4_PSpice\P1_2025_43
+
+
+ ****     TEMPERATURE-ADJUSTED VALUES      TEMPERATURE =  120.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+ **** DIODE MODEL PARAMETERS
+
+                 BZX84-C5V1     X_U3.1N4148    X_U1.1N4148  
+
+         IS        1.627E-12      1.369E-06      1.369E-06  
+         VJ        6.422E-01      7.379E-01      7.379E-01  
+        CJO        2.510E-10      7.088E-13      7.088E-13  
+         RS        5.162E-01      6.458E-01      6.458E-01  
+        IKF        1.176E-02      0.000E+00      0.000E+00  
+         BV        5.176E+00      1.100E+02      1.100E+02  
+
+                 X_U2.1N4148                                
+
+         IS        1.369E-06  
+         VJ        7.379E-01  
+        CJO        7.088E-13  
+         RS        6.458E-01  
+        IKF        0.000E+00  
+         BV        1.100E+02  
+
+
+ **** BJT MODEL PARAMETERS
+
+                   QBC856B        QBC846B        QMJD31C    
+
+         BF        3.153E+02      3.244E+02      3.419E+03  
+        ISE        1.263E-11      7.276E-13      5.926E-06  
+        VJE        5.259E-01      5.924E-01      4.861E-01  
+        CJE        1.262E-11      1.360E-11      4.425E-10  
+         RE        6.630E-01      6.490E-01      1.000E-04  
+         RB        1.000E+01      1.000E+01      2.249E+01  
+         BR        8.680E+00      8.290E+00      3.674E+02  
+        ISC        2.252E-10      5.006E-09      7.232E-07  
+        VJC        2.482E-01      3.153E-01      7.580E-01  
+        CJC        7.903E-12      3.949E-12      3.826E-10  
+         RC        7.180E-01      7.014E-01      1.386E-01  
+        RBM        5.000E-06      5.000E+00      1.000E-12  
+         IS        1.161E-09      1.050E-09      1.342E-06  
+        ISS        0.000E+00      0.000E+00      0.000E+00  
+        VJS        5.821E-01      5.821E-01      5.821E-01  
+        CJS        0.000E+00      0.000E+00      0.000E+00  
+      GAMMA        1.000E-11      1.000E-11      1.000E-11  
+        RCO        0.000E+00      0.000E+00      0.000E+00  
+         VO        1.000E+01      1.000E+01      1.000E+01  
+
+                 QMJD32CT4G                                 
+
+         BF        3.294E+02  
+        ISE        9.719E-08  
+        VJE        7.136E-02  
+        CJE        2.612E-10  
+         RE        3.296E-02  
+         RB        2.101E+02  
+         BR        3.255E+01  
+        ISC        9.304E-09  
+        VJC        5.098E-01  
+        CJC        1.326E-10  
+         RC        1.648E-01  
+        RBM        1.000E-05  
+         IS        4.494E-08  
+        ISS        0.000E+00  
+        VJS        5.821E-01  
+        CJS        0.000E+00  
+      GAMMA        1.000E-11  
+        RCO        0.000E+00  
+         VO        1.000E+01  
+
+
+**** 11/19/25 12:28:52 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Transient"  [ C:\Users\Roberta\OneDrive\Desktop\P1_2025_434D_Ambrozie_Ioana-Roberta_AAF_N4_PSpice\P1_2025_43
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =  120.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  OUT)    -.0030  (N26078)     .4347 (N26084)  -11.1120 (N26170)  -11.5130     
+
+(N26266)  -11.9560 (N26292)  -11.9560 (N26298)  -12.0000 (N26366)   11.6450     
+
+(N26392)   11.1860 (N26492)   12.0000 (N26544)     .0010 (N26604)    -.4181     
+
+(N26638)     .3917 (N26642)    -.0133 (N26968)    5.0875 (N27050)   -5.0875     
+
+(N27144)   11.6450 (N27222)    -.0015 (N29477) 688.0E-06 (N29963)    0.0000     
+
+(N262301)  -11.5730                   (N264520)   11.5930                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_VEE        3.383E-02
+    V_VCC       -3.442E-02
+    V_V1         1.464E-06
+
+    TOTAL POWER DISSIPATION   8.19E-01  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 11/19/25 12:28:52 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Transient"  [ C:\Users\Roberta\OneDrive\Desktop\P1_2025_434D_Ambrozie_Ioana-Roberta_AAF_N4_PSpice\P1_2025_43
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        2.52
+

@@ -1,0 +1,140 @@
+
+**** 12/14/25 01:12:08 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Margine de faza"  [ c:\users\roberta\onedrive\desktop\p1_2025_434d_ambrozie_ioana-roberta_aaf_n4_pspice\p1_2
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Margine de faza.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/1n4148.lib" 
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/bc807-25.lib" 
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/bc817-25.lib" 
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/bc846b.lib" 
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/bc856b.lib" 
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/bzx84c2v7.lib" 
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/bzx84c5v1.lib" 
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/bzx84c5v6.lib" 
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/bzx84c6v2.lib" 
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/bzx84c6v8.lib" 
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/bzx84c8v2.lib" 
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/bzx84c10.lib" 
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/irfr120npbf.lib" 
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/mjd31cg.lib" 
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/mjd32cg.lib" 
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/mmbfj177lt1g.lib" 
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/mmbfj309lt1g.lib" 
+.LIB "c:/users/roberta/onedrive/desktop/lib_modelepspice_anexa_1/modele_a1_lib/nss30101lt1g.lib" 
+* From [PSPICE NETLIST] section of D:\Apps\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.AC DEC 100 1 100000000
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source AMPLIFICATOR_JF_ROBERTA
+C_C1         N26084 N26604  470p  TC=0,0 
+Q_Q1         N26084 N29477 N26078 QBC856B 
+R_R7         GND N26544  1k TC=0,0 
+R_R4         N26642 N26638  510 TC=0,0 
+Q_Q4         N26170 N26170 N26266 QBC846B 
+Q_Q5         N26078 N26392 N26366 QBC856B 
+R_R5         VCC N26366  330 TC=0,0 
+R_R10         VEE N26266  82 TC=0,0 
+Q_Q10         N26638 N26642 N26604 QBC846B 
+R_R2         N27144 VCC  330 TC=0,0 
+Q_Q6         N26604 N26084 N43012 QBC846B 
+Q_Q8         VCC N26638 OUT QMJD31C 
+R_R9         VEE N26292  82 TC=0,0 
+R_R15         N26968 VCC  1k TC=0,0 
+R_Rs2         N34708 N27222  10 TC=0,0 
+R_R8         N26604 N26642  510 TC=0,0 
+R_R6         N26544 OUT  9.1k TC=0,0 
+Q_Q3         N26084 N26170 N26292 QBC846B 
+Q_Q7         N26638 N26392 N27144 QBC856B 
+Q_Q9         VEE N26604 OUT QMJD32CT4G 
+R_R14         N27050 VEE  1k TC=0,0 
+R_R13         GND N26392  15k TC=0,0 
+Q_Q2         N26170 N26544 N26078 QBC856B 
+R_Rs1         N27222 OUT  10 TC=0,0 
+R_R11         IN N29477  470 TC=0,0 
+R_R12         GND N29477  330k TC=0,0 
+X_U1         VCC N42690 1N4148 
+X_U3         N43012 VEE 1N4148 
+X_U2         N42690 N26392 1N4148 
+
+**** RESUMING "Margine de faza.cir" ****
+.END
+
+ERROR(ORPSIM-15141): Less than 2 connections at node N26968.
+
+ERROR(ORPSIM-15141): Less than 2 connections at node N34708.
+
+ERROR(ORPSIM-15141): Less than 2 connections at node N27050.
+
+ERROR(ORPSIM-15141): Less than 2 connections at node IN.
+
+ERROR(ORPSIM-15142): Node N26084 is floating
+
+ERROR(ORPSIM-15142): Node N26604 is floating
+
+ERROR(ORPSIM-15142): Node N29477 is floating
+
+ERROR(ORPSIM-15142): Node N26078 is floating
+
+ERROR(ORPSIM-15142): Node GND is floating
+
+ERROR(ORPSIM-15142): Node N26544 is floating
+
+ERROR(ORPSIM-15142): Node N26642 is floating
+
+ERROR(ORPSIM-15142): Node N26638 is floating
+
+ERROR(ORPSIM-15142): Node N26170 is floating
+
+ERROR(ORPSIM-15142): Node N26266 is floating
+
+ERROR(ORPSIM-15142): Node N26392 is floating
+
+ERROR(ORPSIM-15142): Node N26366 is floating
+
+ERROR(ORPSIM-15142): Node VCC is floating
+
+ERROR(ORPSIM-15142): Node VEE is floating
+
+ERROR(ORPSIM-15142): Node N27144 is floating
+
+ERROR(ORPSIM-15142): Node N43012 is floating
+
+ERROR(ORPSIM-15142): Node OUT is floating
+
+ERROR(ORPSIM-15142): Node N26292 is floating
+
+ERROR(ORPSIM-15142): Node N26968 is floating
+
+ERROR(ORPSIM-15142): Node N34708 is floating
+
+ERROR(ORPSIM-15142): Node N27222 is floating
+
+ERROR(ORPSIM-15142): Node N27050 is floating
+
+ERROR(ORPSIM-15142): Node IN is floating
+
+ERROR(ORPSIM-15142): Node N42690 is floating
+
